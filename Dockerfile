@@ -1,6 +1,6 @@
 FROM alpine:3.10 as builder
 
-ARG VERSION=7.13.0
+ARG VERSION=7.12.0
 ARG DISTRO=wildfly
 ARG SNAPSHOT=true
 
