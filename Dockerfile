@@ -1,7 +1,7 @@
 FROM alpine:3.10 as builder
 
 ARG VERSION=7.13.0
-ARG DISTRO=wildfly
+ARG DISTRO=tomcar
 ARG SNAPSHOT=true
 
 ARG EE=false
@@ -71,7 +71,7 @@ RUN apk add --no-cache \
 
 RUN addgroup -g 1000 -S camunda && \
     adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
-WORKDIR /camunda/conf
+WORKDIR /camunda
 USER camunda
 
 ENTRYPOINT ["/sbin/tini", "--"]
