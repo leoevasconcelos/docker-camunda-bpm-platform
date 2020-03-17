@@ -71,7 +71,7 @@ RUN apk add --no-cache \
 
 RUN addgroup -g 1000 -S camunda && \
     adduser -u 1000 -S camunda -G camunda -h /camunda -s /bin/bash -D camunda
-WORKDIR /camunda
+WORKDIR /camunda/conf
 USER camunda
 
 ENTRYPOINT ["/sbin/tini", "--"]
