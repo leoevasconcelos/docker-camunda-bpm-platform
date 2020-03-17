@@ -1,7 +1,7 @@
 FROM alpine:3.10 as builder
 
 ARG VERSION=7.13.0
-ARG DISTRO=tomcar
+ARG DISTRO=wildfly
 ARG SNAPSHOT=true
 
 ARG EE=false
